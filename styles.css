@@ -1,118 +1,299 @@
 header{
-    h1 {color: aliceblue;
-    text-align: left;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    text-shadow: 10px 5px 20px #f7f4f4;
-    margin: 0;
-    padding: 0;
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
-    text-underline-position: under;
-    text-transform: uppercase;
-    text-align: left;
-    text-indent: 20px;
-    text-justify: inter-character;
-    text-align-last: left;
-    text-decoration-style: wavy;
-    text-decoration-line: underline;
-    text-decoration-skip-ink: none;
-    text-decoration-skip: objects;
-    text-decoration-color: #ffffff;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
-    text-underline-position: under;
-    text-transform: uppercase;
-    text-align: left;
-    text-indent: 20px;
-    text-justify: inter-character;
-    text-align-last: left;
-    text-decoration-style: wavy;
-     }   
-    background-image: url(imagenes/cutsie_edited.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 100px;
-    margin: 0;
-    box-shadow: rgb(0, 0, 0) 0px 50px 20px;
-    position: relative;
-    z-index: 1;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: -1;
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: -1;
-    }
-    h1 {
-        color: aliceblue;
-        text-align: left;
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        text-shadow: 10px 5px 20px #f7f4f4;
-        margin: 0;
-        padding: 0;
-        text-decoration: underline;
-        text-decoration-color: #ffffff;
-        text-decoration-thickness: 2px;
-        text-underline-offset: 5px;
-        text-underline-position: under;
-        text-transform: uppercase;
-        text-align: left;
-        text-indent: 20px;
-        text-justify: inter-character;
-        text-align-last: left;
-    }
+    font-size: 20px; /* tamaño del texto */
+    font-family: 'Courier New', Courier, monospace; /* tipo de letra */
+    text-shadow: 10px 5px 20px #f7f4f4; /* sombra del texto 10px hacia la derecha 5px hacia abajo 20px de difuminado */
+    margin: 0; /* elimina espacio exterior del elemento. 0 */
+    text-decoration: underline;  /* subrayado, lo activa */
+    text-decoration-color: #ffffff; /* color del subrayado */
+    text-decoration-thickness: 2px; /* grosor del subrayado */
+    text-decoration-style: wavy; /* estilo del subrayado */
+    text-underline-offset: 5px; /* distancia del subrayado al texto */
+    text-underline-position: under; /* posicion del subrayado */
+    text-transform: uppercase; /* convierte todo el texto en mayusculas */
+    text-decoration-skip-ink: none; /* subrayado sin tinta */; 
+    text-indent: 20px; /* sangria de 20px */
+    background-image: url("imagenes/casa\ china"); /* imagen de fondo */
+    background-position: center; /* posiciona la imagen de fondo en el centro */
+    background-size: cover; /* cubre todo el elemento */
+    background-attachment: fixed; /* fija la imagen de fondo */
+    padding: 100px; /* espacio interior del elemento */
+    box-shadow: rgb(0, 0, 0) 0px 50px 20px; /* sombra del elemento 0px a la derecha 50px hacia abajo 20px de difuminado */
+    position: relative; /* posiciona el elemento relativo a su posicion original */
+    z-index: 0;  /* posiciona el elemento por encima de otros elementos */
+    
+ 
+}
+
+header:before {
+    content: '';  /* crea un pseudo elemento */
+    position: absolute;  /* posiciona el pseudo elemento de forma absoluta */
+    top: 0; /* posiciona el pseudo elemento en la parte superior */
+    left: 0; /* posiciona el pseudo elemento a la izquierda */
+    right: 0; /* posiciona el pseudo elemento a la derecha */
+    bottom: 0; /* posiciona el pseudo elemento en la parte inferior */
+    background-color: rgba(0, 0, 0, 0.5); /* color de fondo del pseudo elemento */
+    z-index: -1; /* posiciona el pseudo elemento por debajo de otros elementos */
+}
+
+header:after { /*Este código crea otro pseudo-elemento, llamado ::after, que es muy similar a ::before, pero se inserta al final del contenido del header (aunque igual es invisible, solo se usa para estilo).*/
+    content: ''; /*Necesario para que el pseudo-elemento se genere. Aquí no contiene texto, solo se usa para aplicar estilos.*/
+    position: absolute; /*Posiciona el pseudo-elemento de forma absoluta, al igual que ::before.*/
+    top: 0; /* Hace que el pseudo-elemento ocupe toda el área del header, cubriéndolo de extremo a extremo.*/
+    left: 0; /* Hace que el pseudo-elemento ocupe toda el área del header, cubriéndolo de extremo a extremo.*/
+    right: 0; /* Hace que el pseudo-elemento ocupe toda el área del header, cubriéndolo de extremo a extremo.*/
+    bottom: 0; /* Hace que el pseudo-elemento ocupe toda el área del header, cubriéndolo de extremo a extremo.*/
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo del pseudo-elemento, en este*/
+    z-index: -1; /*Coloca esa capa debajo del contenido del header, para que no tape el texto ni los elementos visibles*/
+}
+
+header h1 {
+    color: aliceblue; /* Cambia el color del texto a un azul muy claro */
+    font-size: 20px; /* Tamaño del texto en píxeles */
+    font-family: 'Courier New', Courier, monospace; /* Tipo de letra estilo máquina de escribir */
+    text-shadow: 10px 5px 20px #f7f4f4; /* Sombra del texto: (x, y, difuminado, color) */
+    margin: 0; /* Sin margen exterior */
+    padding: 0; /* Sin relleno interno */
+    text-decoration: underline; /* Subraya el texto */
+    text-decoration-color: #ffffff; /* Color de la línea subrayada (blanco) */
+    text-decoration-thickness: 2px; /* Grosor de la línea subrayada */
+    text-underline-offset: 5px; /* Espacio entre el texto y la línea subrayada */
+    text-underline-position: under; /* Coloca la línea debajo del texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    text-indent: 20px; /* Sangría (espacio) al inicio de la primera línea del texto */
+    text-align-last: left; /* Alinea la última línea de un texto justificado a la izquierda */
+    
+}
+
+
+  
+nav {
+    text-align: center; /* Centra horizontalmente el contenido del nav */
+    margin-top: 50px; /* Espacio de 50px por encima del nav */
+    font-size: 28px; /* Tamaño de letra de los elementos dentro del nav */
+    background-image: url(imagenes/ojos\ 1.gif); /* Imagen de fondo del nav */
+    background-attachment: fixed; /* Fija el fondo al scroll (efecto parallax) */
+    background-repeat: repeat-x; /* Repite la imagen horizontalmente */
+    background-size: contain; /* Ajusta el tamaño para que quepa completa en el eje vertical */
+    background-position: 0 0; /* Posición inicial de la imagen (esquina superior izquierda) */
+    animation: moverFondo 10s linear infinite; /* Aplica animación que hace que se mueva a la izquierda constantemente */
+    padding: 10px
   
 
 }
-body{cursor: none;
-}
-.cursor{
-    cursor: url(imagenes/fk\ you.jpeg), auto;
+
+/* Definimos la animación que mueve el fondo */
+@keyframes moverFondo {
+    from {
+        background-position: 0 0; /* Comienza en el punto inicial */
+    }
+    to {
+        background-position: -1000px 0; /* Termina desplazando la imagen 1000px a la izquierda */
+    }
 }
 
-nav {text-align: center;
-    list-style-type: lower-latin;
-    margin-top: 50px;
-    font-size: 28px;
-}
-nav ul li{display: inline;
-    margin-right: 20px;
-padding: 20px;
-list-style-type: lower-latin;
+nav ul li {
+    display: inline; /* Muestra los elementos en línea horizontal */
+    margin-right: 20px; /* Espacio de 20px entre elementos */
+    padding: 20px; /* Espacio interno de 20px alrededor del contenido */
+    font-family: 'Courier New', Courier, monospace; /* Fuente estilo máquina de escribir */
 }
 
-nav ul li a{
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
+nav ul li a {
+    color: rgb(255, 255, 255); /* Color del texto en rojo claro con 50% de opacidad */
+    text-decoration: none; /* Subraya los enlaces */
+    text-shadow: 0 0 10px white; /* sombra blanca difusa */
+    font-weight: bold; /* font-weight: Haz el texto más grueso para que destaque más */ 
+    cursor: none !important;
+    
 }
-nav ul li a:hover{
-    color: rgb(0, 0, 0);
-    background-color: rgb(190, 190, 190);
-    padding: 0;
-    box-shadow: 0 0 12px rgb(0, 0, 0);
+
+nav ul li a:hover { /*:hover es un pseudo-clase de CSS que aplica estilos cuando el usuario pasa el cursor por encima de un elemento.*/
+    color: #e08484; /* Cambia el color del texto a un rojo claro cuando paso el mouse */
+    text-shadow: 0 0 10px white; /* sombra blanca difusa */
+    background-color: transparent; /* Sin fondo */
+    box-shadow: none; /* Sin sombra si no la quieres */
+    cursor: none !important;
+}
+.texto1 {
+    max-width: 500px;
+    color: rgb(0, 0, 0); /* Asegura que el texto sea visible */
+    text-shadow: 0 0 10px white; /* sombra blanca difusa */
+    font-weight: bold; /* font-weight: Haz el texto más grueso para que destaque más */
+}
+
+.entrada { 
+    display: flex; /* Muestra los elementos en línea horizontal */
+    text-align: right; /* Alinea el texto a la derecha */
+    font-weight: bold; /* font-weight: Haz el texto más grueso para que destaque más */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(imagenes/gokusad.gif); /* Imagen de fondo */
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll; /* Fija el fondo al scroll (efecto parallax) */
+    padding: 200px;
+    align-items: center;        /* Centra verticalmente los hijos */
+    justify-content: space-between;  /* Deja espacio entre texto y slider */
+    gap: 50px;                  /* Espacio entre el texto y el slider */
+   
+
+}
+
+/* Contenedor del slider: define el tamaño visible */
+.slider {
+  width: 500px;      /* Ancho del slider */
+  height: 300px;     /* Alto del slider */
+  overflow: hidden;  /* Oculta lo que se sale del área del slider */
+  margin-left: 0;   /* Lo pega a la izquierda */
+  position: relative; /* Para posicionamiento interno si se requiere */
+  border-radius: 20px; /* Bordes redondeados */
+  
+}
+
+/* Pista que contiene todas las imágenes en fila */
+.slide-track {
+  display: flex;                /* Coloca las imágenes en una fila horizontal */
+  width: calc(500px * 12);       /* Ancho total: 6 imágenes de 500px cada una */
+  animation: scroll 30s ease-in-out infinite; /* Animación de desplazamiento */
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para cada imagen */
+.slide-track img {
+  width: 500px;        /* Cada imagen ocupa 500px */
+  height: 300px;       /* Alto de cada imagen */
+  object-fit: cover;   /* Ajusta la imagen sin deformarla */
+}
+
+.slide-track img { /*Separar ligeramente las imágenes mejora la estética:*/
+  margin-right: 10px;
+  border-radius: 15px;
+  filter: brightness(0.95) contrast(1.1);
+}
+.slide-track img:hover { /* Cambia el tamaño de la imagen al pasar el mouse */
+  transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
+  transition: transform 0.3s ease; /* Transición suave */
+
+}
+.slider:hover .slide-track {
+  animation-play-state: paused; /* Pausa la animación */
+}
+
+
+
+
+/* Definición de la animación llamada "scroll" */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);          /* Empieza sin desplazamiento */
+  }
+  100% {
+    transform: translateX(-3000px);    /* Mueve el track hacia la izquierda 6 imágenes * 500px */
+  }
 }
 
     
 
+/* Oculta el cursor nativo del navegador */
+body {
+  cursor: none;
+}
 
+/* Oculta el cursor nativo para todos los elementos (asegura que el cursor estándar nunca se vea) */
+* {
+  cursor: none !important;
+}
 
-  
+/* ------------------------------------ */
+/* Punto central del cursor personalizado */
+.cursor {
+  position: fixed; /* Posición fija en la pantalla */
+  top: 0;
+  left: 0;
+  width: 12px; /* Tamaño del punto central */
+  height: 12px;
+  background-color: #000; /* Color negro sólido */
+  border-radius: 50%; /* Hace que el div sea un círculo */
+  pointer-events: none; /* Permite hacer clic a través del cursor */
+  transform: translate(-50%, -50%); /* Centra el punto respecto al mouse */
+  z-index: 10000; /* Asegura que esté por encima de todo */
+  transition: transform 0.1s ease; /* Transición suave si se añade efecto de zoom */
+}
 
+/* ------------------------------------ */
+/* Círculo exterior que rodea el cursor (tipo efecto de "agujero negro") */
+.cursor-effect {
+  position: fixed; /* Siempre en la misma posición visual */
+  top: 0;
+  left: 0;
+  width: 80px; /* Tamaño más grande que el punto central */
+  height: 80px;
+  border-radius: 50%; /* Círculo perfecto */
+  pointer-events: none; /* No interfiere con clics */
+  transform: translate(-50%, -50%); /* Centrado exacto en el mouse */
+  z-index: 9999; /* Justo debajo del punto central */
+
+  background: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+
+  /* Efecto visual de agujero: sombra interna + brillo externo */
+  box-shadow:
+    inset 0 0 30px 10px rgba(0, 0, 0, 0.9), /* Sombra interior intensa */
+    0 0 20px 5px rgba(0, 0, 0, 0.8); /* Sombra exterior suave */
+
+  transition: transform 0.15s ease; /* Suaviza movimientos si se animan */
+}
+
+/* ------------------------------------ */
+/* Contenedor de partículas giratorias */
+#cursor-particles {
+  position: fixed; /* Siempre visible en pantalla */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupar todo el ancho de la pantalla */
+  height: 100vh; /* Ocupar todo el alto de la pantalla */
+  pointer-events: none; /* No interfiere con el mouse */
+  overflow: visible; /* Las partículas pueden salir del contenedor */
+  z-index: 9999; /* Debajo del punto central pero encima del fondo */
+}
+
+/* ------------------------------------ */
+/* Estilo de cada partícula */
+.particle {
+  position: absolute; /* Permite colocarlas libremente */
+  width: 6px;
+  height: 6px;
+  background: white; /* Color blanco de las partículas */
+  border-radius: 50%; /* Partículas redondas */
+  opacity: 0.8; /* Ligeramente transparentes */
+  filter: blur(1px); /* Efecto suave/brillante */
+  will-change: transform; /* Optimiza animaciones */
+}
+.cursor-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  background: radial-gradient(circle, rgb(255, 255, 255), transparent 60%);
+  mix-blend-mode: screen;
+  filter: blur(20px);
+}
+/* Lente visible que usa el filtro SVG */
+.cursor-lens {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  filter: url(#lens-distortion);
+  backdrop-filter: blur(2px); /* Opcional */
+}

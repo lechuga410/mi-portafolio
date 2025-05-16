@@ -1,53 +1,86 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Idioma de la página: español -->
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="shortcut icon" href="imagenes/11zon_cropped (1).png" type="imagenes/png">
-        <title class="Bienvenido">¡Bienvenido a mi portafolio!</title>
-        
+        <meta charset="UTF-8"> <!-- Codificación de caracteres, UTF-8 para soportar acentos y caracteres especiales -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive, ajustándose al ancho del dispositivo -->
+        <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo con los estilos -->
+        <link rel="shortcut icon" href="imagenes/11zon_cropped (1).png" type="image/png"> <!-- Icono que aparece en la pestaña del navegador -->
+        <title >¡Bienvenido a mi portafolio!</title> <!-- Título de la página que aparece en la pestaña del navegador -->
     </head>
 
     <body>
         
-        <header id="header">
-            <h1>Sebastián Sánchez Velásquez</h1>
+        <header id="header"> <!-- Encabezado principal de la página -->
+            <h1>Sebastián Sánchez Velásquez</h1> <!-- Título principal visible -->
         </header>
 
-        <nav>
-            <ul>
-                <li><a href="#inicio" class="entrada">inicio</a></li>
-                <li><a href="sobre-mi.html" class="sobre-mi">sobre mi</a></li>
-                <li><a href="trabajos.html" class="trabajos">trabajos</a></li>
-                <li><a href="servicios.html" class="servicios">servicios</a></li>
-                <li><a href="curriculum.html" class="curriculum">curriculum</a></li>
-                <li><a href="contacto.html" class="contacto">contacto</a></li>
-                <li><a href="redes-sociales.html" class="redes-sociales">redes sociales</a></li>
 
+
+        <nav> <!-- Barra de navegación -->
+            <ul> <!-- Lista sin orden para los enlaces de navegación -->
+                <li><a href="#inicio">inicio</a></li> <!-- Enlace que lleva a la sección inicio dentro de la misma página -->
+                <li><a href="sobre-mi.html" class="sobre-mi">sobre mi</a></li> <!-- Enlace a otra página "sobre-mi.html" -->
+                <li><a href="trabajos.html" class="trabajos">trabajos</a></li> <!-- Enlace a la página de trabajos -->
+                <li><a href="servicios.html" class="servicios">servicios</a></li> <!-- Enlace a la página de servicios -->
+                <li><a href="curriculum.html" class="curriculum">curriculum</a></li> <!-- Enlace a la página de curriculum -->
+                <li><a href="contacto.html" class="contacto">contacto</a></li> <!-- Enlace a la página de contacto -->
+                <li><a href="redes-sociales.html" class="redes-sociales">redes sociales</a></li> <!-- Enlace a la página de redes sociales -->
             </ul>
         </nav>
-        <section class="entrada" id="inicio">
-            <div>
-                <h2>¡Bienvenido a mi portafolio!</h2>
-                <p>Hola, soy Sebastián Sánchez Velásquez, un apasionado por la tecnología y el crecimineto personal. Aquí podrás conocer más sobre mí y mis proyectos.</p>
-                <p>Técnico en desarrollo de software con conocimientos en HTML.</p>
-                <p>Mi objetivo es crear soluciones innovadoras y efectivas que ayuden a las personas y empresas a alcanzar sus metas.</p>
-                <p>Si deseas saber más sobre mis habilidades y proyectos, no dudes en explorar mi portafolio.</p>
-                <p>¡Gracias por visitar mi portafolio!</p>
+
+        <section class="entrada" id="inicio"> <!-- Sección principal de bienvenida con id para enlazar desde navegación -->
+
+            <div class="slider">
+                <div class="slide-track">
+                <img src="imagenes/dipper y mabel" alt="Imagen 1" />
+                <img src="imagenes/escandalosos" alt="Imagen 2" />
+                <img src="imagenes/gumball.jpg" alt="Imagen 3" />
+                <img src="imagenes/triste.jpg" alt="Imagen 4" />
+                <img src="imagenes/minions.jpg" alt="Imagen 5" />
+                <img src="imagenes/rio.jpg" alt="Imagen 6" />
+                <img src="imagenes/dipper y mabel" alt="Imagen 7" />
+                <img src="imagenes/escandalosos" alt="Imagen 8" />
+                <img src="imagenes/gumball.jpg" alt="Imagen 9" />
+                <img src="imagenes/triste.jpg" alt="Imagen 10" />
+                <img src="imagenes/minions.jpg" alt="Imagen 11" />
+                <img src="imagenes/rio.jpg" alt="Imagen 12" />
+                </div>
+            </div> <!-- <-- AQUÍ CIERRAS el slider -->
+
+            <div class="texto1"> <!-- Contenedor para agrupar los textos -->
+                <h2>¡Bienvenido a mi portafolio!</h2> <!-- Subtítulo de la sección -->
+                <p>Hola, soy Sebastián Sánchez Velásquez, un apasionado por la tecnología y el crecimiento personal. Aquí podrás conocer más sobre mí y mis proyectos.</p> 
+                <p>Técnico en desarrollo de software con conocimientos en HTML.</p> 
+                <p>Mi objetivo es crear soluciones innovadoras y efectivas que ayuden a las personas y empresas a alcanzar sus metas.</p> 
+                <p>Si deseas saber más sobre mis habilidades y proyectos, no dudes en explorar mi portafolio.</p> 
+                <p>¡Gracias por visitar mi portafolio!</p> 
             </div>
+
         </section>
+
         
 
+   
+
+
+
+     
        
+        <div class="cursor"></div> <!-- Div para el cursor personalizado -->
+        <div class="cursor-effect"></div> <!--Círculo exterior tipo "agujero negro"-->
+        <div id="cursor-particles"></div> <!--Contenedor de partículas que giran alrededor del cursor-->
+        <script src="script.js"></script> <!-- Enlace al archivo JavaScript externo -->
+        <div class="cursor-light"></div>
+        <div class="cursor-lens"></div>
 
-
-
-
-
-
+        <!-- Filtro SVG oculto pero disponible -->
+        <svg width="0" height="0">
+        <filter id="lens-distortion">
+            <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        </svg>
 
     </body>
-    
-     
 </html>
+<!-- Fin del documento HTML -->
